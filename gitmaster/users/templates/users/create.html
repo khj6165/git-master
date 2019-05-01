@@ -1,0 +1,15 @@
+
+
+<form action="{% url 'create_user' %}" method="POST">
+    {% csrf_token %}
+    <label>이름을 입력하세요</label><br>
+    <input type="text" name="name"/><br>
+    
+    <label>생년월일을 입력하세요</label><br>
+    <input type="date" name="bdate"/><br>
+    
+    <label>나이를 입력하세요</label><br>
+    <input type="number" name="age"/><br>
+
+    <input type="submit" value="Submit"/>
+</form>
