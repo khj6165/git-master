@@ -21,4 +21,5 @@ from users import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.create_user, name="create_user"),
+    path('users/', include('users.urls')),
 ]

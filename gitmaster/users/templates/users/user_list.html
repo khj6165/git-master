@@ -1,0 +1,12 @@
+{% for user in users %}
+    <h1>{{ user.name }}</h1>
+    <h1>{{ user.age }}</h1>
+    <h1>{{ user.bdate }}</h1>
+    <a href="{% url 'update_user' user.id %}">수정</a>
+    <form action="{% url 'delete_user' user.id %}" method=="POST">
+        {% csrf_token %}
+        <input type="submit" value="삭제">
+    </form>
+
+    <p>================</p>
+{% endfor %}
